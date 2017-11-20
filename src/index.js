@@ -1,8 +1,8 @@
 /*
- * @Author: Kvkens
+ * @Author: gct
  * @Date:   2017-5-15 00:00:00
- * @Last Modified by:   Kvkens
- * @Last Modified time: 2017-09-13 15:52:25
+ * @Last Modified by:   gct
+ * @Last Modified time: 2017-11-20 08:52:25
  */
 function $molilog(msg){
   if(chalk){

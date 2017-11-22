@@ -10,12 +10,12 @@ var path = require("path");
 var chalk = require("chalk");
 var merge = require("webpack-merge");
 
-var ubaConfig;
+var moliConfig;
 
 
 $molilog("webpack.base is running......");
 try {
-  ubaConfig = require(path.resolve(".","moli.config.js")).devConfig;
+  moliConfig = require(path.resolve(".","moli.config.js")).devConfig;
 } catch (e) {
   console.log(chalk.red(e));
   console.log("[moli] Please check the configuration file");
@@ -39,4 +39,4 @@ var baseConfig= {
 }
 
 
-module.exports = merge(baseConfig, ubaConfig);
+module.exports = merge(baseConfig, moliConfig);

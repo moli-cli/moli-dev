@@ -1,6 +1,6 @@
 {
   "name": "moli-dev",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "moli plugin for dev server",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iuap-design/moli-server.git"
+    "url": "git+https://github.com/moli-cli/moli-dev.git"
   },
   "keywords": [
     "moli",
@@ -20,9 +20,9 @@
   "author": "gct@yonyou.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yymoli/moli-dev/issues"
+    "url": "https://github.com/moli-cli/moli-dev/issues"
   },
-  "homepage": "https://github.com/yymoli/moli-dev#readme",
+  "homepage": "https://github.com/moli-cli/moli-dev#readme",
   "dependencies": {
     "chalk": "^2.1.0",
     "express": "^4.15.4",

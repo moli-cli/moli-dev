@@ -20,7 +20,7 @@ function getHelp() {
     log.log("  options:");
     log.log("");
     log.log("    -m, --mobile       run dev in mobile mode");
-    log.log("    -w, --web          run dev in web mode");
+    log.log("    -w, --web          run dev in web mode（default mode）");
     log.log("    -h, --help         moli-dev help info");
     log.log("    -v, --version      moli-dev version info");
     log.log("");

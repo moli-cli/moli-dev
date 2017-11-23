@@ -36,7 +36,7 @@ function getHelp() {
  * 版本信息
  */
 function getVersion() {
-    log.log("version:" + require("../package.json").version, "#00bb00");
+    log.success("version:" + require("../package.json").version);
     process.exit(0);
 }
 

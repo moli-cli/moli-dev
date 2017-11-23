@@ -33,6 +33,8 @@ module.exports = {
             proxyConfig = moliConfig.proxyConfig;
             //读取静态资源配置
             staticConfig = moliConfig.staticConfig;
+            //设置mock配置
+            mockConfig = require(path.resolve(".", "moli.mock.js"));
             //设置默认mock
             app.use(express.static(path.resolve('.', 'mock')));
             //设置指定静态资源目录
@@ -91,7 +93,6 @@ module.exports = {
         } catch (e) {
             log.error(e);
             log.error("Please check the configuration file");
-            mockConfig = undefined;
             process.exit(0);
         } finally {
         }

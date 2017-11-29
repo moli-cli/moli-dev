@@ -13,6 +13,8 @@ const PACKAGE_TYPE_MOBILE = "mobile";
  * 帮助信息
  */
 function getHelp() {
+    log.success("moli dev command help info");
+    log.log("");
     log.log("  Usage : ");
     log.log("");
     log.log("  moli dev [options]");
@@ -21,6 +23,7 @@ function getHelp() {
     log.log("");
     log.log("    -m, --mobile       run dev in mobile mode");
     log.log("    -w, --web          run dev in web mode（default mode）");
+    log.log("    --custom [type]    run dev in user custom [type]");
     log.log("    -h, --help         moli-dev help info");
     log.log("    -v, --version      moli-dev version info");
     log.log("");
@@ -28,6 +31,7 @@ function getHelp() {
     log.log("");
     log.log("    $ moli dev -w");
     log.log("    $ moli dev --mobile");
+    log.log("    $ moli dev -custom tv");
     log.log("");
     process.exit(0);
 }
@@ -57,11 +61,15 @@ module.exports = {
         if (options.argv.w || options.argv.web) {
             process.env.NODE_MOLIENV = PACKAGE_TYPE_PC;
         }
+        // 用户自定义模式
+        if (options.argv.custom) {
+            process.env.NODE_MOLIENV = options.argv.custom;
+        }
         // 若用户未传递以上两种信息，默认设置为pc（web）模式
         if (!process.env.NODE_MOLIENV) {
             process.env.NODE_MOLIENV = PACKAGE_TYPE_PC;
         }
-        log.info("dev env:" + process.env.NODE_MOLIENV);
+        log.info("moli dev env:" + process.env.NODE_MOLIENV);
         var dev = require("../libs/dev");
         dev.server(args);
     }
